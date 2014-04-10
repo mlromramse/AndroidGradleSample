@@ -29,12 +29,47 @@ This means that the structure of the project has the new layout with java source
 The main application is a simple adder, you haven't seen one of those before have you :)
 For the purpose of achieving the goals of this project it is sufficient though.
 
-The files I altered added was simply:
+The files altered and added was simply:
 
     src/main/java/org.company.androidadderapp/MainActivity.java
     src/main/res/drawable/viperaberus1.jpg
     src/main/res/layout/activity_main.xml
     src/main/res/values/strings.xml
 
-To see exactly what I've done look into the different text files above, they are commented.
+To see exactly what was done, take a look into the different text files above, they are commented.
+
+_If you only are interested of the code this far check out the tag TheAdderAppOnly._
+
+## Instrumentation testing
+
+The instrumentation testing is performed with help of the Robotium Solo.
+
+The following was entered to the dependency section in the modules build.gradle:
+
+    androidTestCompile ('com.jayway.android.robotium:robotium-solo:5.+') {
+        exclude module: 'android'
+        exclude module: 'android-test'
+    }
+
+After that the folders `androidTest/java/instrumentationTests` was added to the `src` folder.
+
+The structure of the project is now like this:
+
+    AndroidGradleSample
+    └── androidAdderApp
+        ├── libs
+        └── src
+            ├── androidTest
+            │   └── java
+            |       └── instrumentationTests
+            └── main
+                ├── java
+                └── res
+
+In the instrumentationTests folder the MainActivityTest was added.
+In that class we use ActivityInstrumentationTestCase2<T> and Robotium Solo.
+
+Take a look at the MainActivityTest class for more information, it is commented where needed.
+
+_If you want to look at the code at this stage check out the TheFirstInstrumentationTest tag_
 
