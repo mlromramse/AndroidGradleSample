@@ -73,3 +73,25 @@ Take a look at the MainActivityTest class for more information, it is commented 
 
 _If you want to look at the code at this stage check out the TheFirstInstrumentationTest tag_
 
+## Plain jUnit tests (that runs on device)
+
+In this section a new test package is added where we put our plain jUnit tests.
+Please keep in mind that these tests runs on the device and not in your IDE.
+
+In the androidTest/java folder a new package is created and called unitTests:
+
+    AndroidGradleSample
+    └── androidAdderApp
+        ├── libs
+        └── src
+            ├── androidTest
+            │   └── java
+            |       └── instrumentationTests
+            |       └── unitTests
+            └── main
+                ├── java
+                └── res
+
+MainActivityUnitTest was added in the unitTests package to host our unit tests.
+
+_If you want to look at the code at this stage check out the TheFirstUnitTest tag_
